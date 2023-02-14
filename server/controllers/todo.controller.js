@@ -1,6 +1,5 @@
 
 const asyncHandler = require('express-async-handler') ;
-
 const Todo = require('../models/todo.model') ;
 
 const getTodos = asyncHandler(async (req, res) => {
@@ -45,9 +44,6 @@ const deleteTodo = asyncHandler( async (req, res) => {
     await todo.remove()
     res.status(200).json({ id: req.params.id })
 })
-
-
-
 
 module.exports = {
     getTodos, addTodo, editTodo, todoDetails, deleteTodo

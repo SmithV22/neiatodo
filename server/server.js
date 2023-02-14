@@ -1,4 +1,3 @@
-
 const express = require('express') ;
 const colors = require('colors') ;
 const dotenv = require('dotenv').config() ;
@@ -13,7 +12,7 @@ const app = express() ;
 
 app.use(cors()) ;
 app.use(express.json()) ;
-app.use(express.urlencoded({ extended: true })) ;
+app.use(express.urlencoded({ extended: false })) ;
 app.use('/api/todo', require('./routes/todo.routes')) ;
 
 app.use(errorHandler) ;
